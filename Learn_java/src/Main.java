@@ -1,5 +1,6 @@
 import DataStructure.BubbleSort;
 import DataStructure.MergeSort;
+import DataStructure.QuickSort;
 import OOP.Cat;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -27,14 +28,20 @@ public class Main {
 //            System.out.print(arr[i]);
 //        }
         int[] arr = {1, 5, 4, 8, 2, 3, 10, 9, 6, 7};
-        MergeSort sort = new MergeSort();
-        System.out.println("Mảng ban đầu:");
-        sort.printArray(arr);
+        QuickSort sort = new QuickSort();
+        sort.sort(arr,0,arr.length -1);
+        for (int i=0; i< arr.length-1;i++){
+            System.out.print(arr[i]);
 
-        MergeSort ob = new MergeSort();
-        ob.sort(arr, 0, arr.length - 1);
-
-        System.out.println("\nMảng đã sắp xếp:");
-        sort.printArray(arr);
+        }
+//        MergeSort sort = new MergeSort();
+//        System.out.println("Mảng ban đầu:");
+//        sort.printArray(arr);
+//
+//        MergeSort ob = new MergeSort();
+//        ob.sort(arr, 0, arr.length - 1);
+//
+//        System.out.println("\nMảng đã sắp xếp:");
+//        sort.printArray(arr);
     }
 }

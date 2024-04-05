@@ -1,5 +1,7 @@
 package DataStructure;
 
+import java.util.Arrays;
+
 public class MergeSort {
     private void merge(int arr[], int left, int middle, int right) {
         int n1 = middle - left + 1;
@@ -39,12 +41,10 @@ public class MergeSort {
 
     // Hàm chính sắp xếp mảng sử dụng MergeSort
     public void sort(int arr[], int left, int right) {
-        if (left < right) {
-            int middle = (left + right) / 2;
-            sort(arr, left, middle);
-            sort(arr, middle + 1, right);
-            merge(arr, left, middle, right);
-        }
+        int middle = (left + right) / 2;
+        sort(arr, left, middle);
+        sort(arr, middle + 1, right);
+        merge(arr, left, middle, right);
     }
 
     public static void printArray(int arr[]) {
