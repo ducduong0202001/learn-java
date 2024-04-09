@@ -1,31 +1,31 @@
 package DataStructure;
 
 public class QuickSort {
-    public void sort(int[] arr, int l, int r) {
-        if (l >= r) return;
-        int iL = l;
-        int iR = r;
-        int k = l + (iR - iL) / 2;
+    public void sort(int[] arr, int leftOfArr, int rightOfArr) {
+        if (leftOfArr >= rightOfArr) return;
+        int iLeft = leftOfArr;
+        int iRight = rightOfArr;
+        int k = leftOfArr + (iRight - iLeft) / 2;
         var result = arr[k];
 
-        while (iL <= iR) {
-            while (arr[iL] < arr[k]) {
-                iL++;
+        while (iLeft <= iRight) {
+            while (arr[iLeft] < arr[k]) {
+                iLeft++;
             }
-            while (arr[iR] > arr[k]) iR--;
-            if (iL <= iR) {
-                var tem = arr[iL];
-                arr[iL] = arr[iR];
-                arr[iR] = tem;
-                iL++;
-                iR--;
+            while (arr[iRight] > arr[k]) iRight--;
+            if (iLeft <= iRight) {
+                var tem = arr[iLeft];
+                arr[iLeft] = arr[iRight];
+                arr[iRight] = tem;
+                iLeft++;
+                iRight--;
             }
         }
-        if (l < iR) {
-            sort(arr, l, iR);
+        if (leftOfArr < iRight) {
+            sort(arr, leftOfArr, iRight);
         }
-        if (iL < r) {
-            sort(arr, iL, r);
+        if (iLeft < rightOfArr) {
+            sort(arr, iLeft, rightOfArr);
         }
 
     }
