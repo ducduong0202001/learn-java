@@ -1,6 +1,7 @@
 package OOP;
 
 public abstract class Animal {
+
     private String mauLong;
     private String giongLoai;
 
