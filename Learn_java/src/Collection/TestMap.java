@@ -2,9 +2,11 @@ package Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.PriorityQueue;
 
 public class TestMap {
     public static void main(String args[]) {
+
         Map<Integer, String> map = new HashMap<>();
         map.put(1, "duc");
         map.put(2, "van");
