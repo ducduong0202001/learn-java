@@ -16,5 +16,9 @@ public class StudenController {
        StudenDto sdtDto = service.findById(id);
         System.out.println(sdtDto.getAddress());
     }
+    public void createUser() {
+        StudenDto sdtDto = service.createUser();
+        System.out.println(sdtDto.getAddress());
+    }
 
 }

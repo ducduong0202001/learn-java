@@ -20,4 +20,9 @@ public class StudentServiceImp implements  StudentService{
         Student std = repository.findById(id);
         return mapper.map(std,StudenDto.class);
     }
+    @Override
+    public StudenDto createUser() {
+        return null;
+    }
+
 }
